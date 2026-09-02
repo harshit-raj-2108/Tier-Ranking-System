@@ -1,0 +1,30 @@
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.vs {
+  font-weight: 800;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
