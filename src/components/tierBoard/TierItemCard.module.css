@@ -15,6 +15,7 @@
 
 .card:active {
   cursor: grabbing;
+  border-color: var(--color-accent);
 }
 
 .image {
@@ -33,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+  font-family: var(--font-display);
   color: var(--color-text-muted);
 }
 

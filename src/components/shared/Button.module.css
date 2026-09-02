@@ -1,20 +1,16 @@
 .button {
   font: inherit;
   font-weight: 600;
-  border: none;
-  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
   padding: 0.6rem 1.1rem;
   cursor: pointer;
-  transition: filter 0.15s ease, transform 0.05s ease;
+  transition: background-color 0.12s ease, border-color 0.12s ease, transform 0.05s ease;
 }
 
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.button:not(:disabled):hover {
-  filter: brightness(1.08);
 }
 
 .button:not(:disabled):active {
@@ -23,21 +19,40 @@
 
 .primary {
   background: var(--color-accent);
-  color: white;
+  color: var(--color-board);
+}
+
+.primary:not(:disabled):hover {
+  background: var(--color-accent-strong);
+  color: var(--color-on-board);
 }
 
 .secondary {
   background: var(--color-surface-2);
   color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.secondary:not(:disabled):hover {
+  border-color: var(--color-accent);
 }
 
 .danger {
   background: var(--color-danger);
-  color: white;
+  color: var(--color-on-board);
+}
+
+.danger:not(:disabled):hover {
+  background: #8f2e21;
 }
 
 .ghost {
   background: transparent;
   color: var(--color-text-muted);
   padding: 0.4rem 0.6rem;
+}
+
+.ghost:not(:disabled):hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
 }

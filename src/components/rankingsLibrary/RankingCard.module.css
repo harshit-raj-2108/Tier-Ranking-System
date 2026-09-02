@@ -1,6 +1,7 @@
 .card {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--status-color, var(--color-border));
+  border-radius: var(--radius-md);
   background: var(--color-surface);
   overflow: hidden;
   display: flex;
@@ -20,7 +21,9 @@
 }
 
 .name {
-  font-size: 1.05rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
 }
 
 .renameInput {
@@ -44,13 +47,13 @@
 }
 
 .badge[data-status="complete"] {
-  background: rgba(124, 191, 110, 0.2);
-  color: #4a8c3f;
+  background: rgba(111, 143, 99, 0.22);
+  color: #4b6a41;
 }
 
 .badge[data-status="in_progress"] {
-  background: rgba(124, 79, 224, 0.15);
-  color: var(--color-accent);
+  background: rgba(201, 150, 47, 0.2);
+  color: var(--color-accent-strong);
 }
 
 .actions {

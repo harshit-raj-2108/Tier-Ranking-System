@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { CATEGORIES } from "../landing/categories";
 import type { RankingList } from "../../types";
 import { Button } from "../shared/Button";
@@ -12,9 +12,15 @@ interface RankingCardProps {
 }
 
 const STATUS_LABEL = {
-  not_started: "Not Started",
-  in_progress: "In Progress",
+  not_started: "Not started",
+  in_progress: "In progress",
   complete: "Complete",
+} as const;
+
+const STATUS_COLOR = {
+  not_started: "var(--color-border)",
+  in_progress: "var(--color-accent)",
+  complete: "var(--tier-c)",
 } as const;
 
 export function RankingCard({ ranking, onOpen, onRename, onDelete }: RankingCardProps) {
@@ -30,7 +36,10 @@ export function RankingCard({ ranking, onOpen, onRename, onDelete }: RankingCard
   }
 
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      style={{ "--status-color": STATUS_COLOR[ranking.comparison.status] } as CSSProperties}
+    >
       <div className={styles.body} onClick={!isRenaming ? onOpen : undefined}>
         {isRenaming ? (
           <input

@@ -5,42 +5,46 @@
   gap: 0.9rem;
   width: min(320px, 40vw);
   padding: 1.5rem;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   border: 2px solid var(--color-border);
   background: var(--color-surface);
   cursor: pointer;
-  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  transition: border-color 0.12s ease, background-color 0.12s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
   border-color: var(--color-accent);
-  box-shadow: 0 16px 40px rgba(124, 79, 224, 0.2);
+  background: var(--color-surface-2);
+}
+
+.card:active {
+  border-color: var(--color-accent-strong);
 }
 
 .image {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
 }
 
 .imagePlaceholder {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   background: var(--color-surface-2);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-display);
   font-size: 3rem;
-  font-weight: 800;
   color: var(--color-text-muted);
 }
 
 .name {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
   text-align: center;
 }
 

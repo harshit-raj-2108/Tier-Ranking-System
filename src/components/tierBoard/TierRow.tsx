@@ -18,7 +18,7 @@ export function TierRow({ tier, preset, itemIds, itemsById }: TierRowProps) {
 
   return (
     <div className={styles.row}>
-      <div className={styles.chip} style={{ background: preset.color }}>
+      <div className={styles.chip} style={{ background: preset.color, color: preset.text }}>
         <span className={styles.chipLetter}>{preset.label}</span>
         <span className={styles.chipDescription}>{preset.description}</span>
       </div>

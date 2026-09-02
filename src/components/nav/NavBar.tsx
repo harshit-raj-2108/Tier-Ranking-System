@@ -12,7 +12,8 @@ export function NavBar() {
   return (
     <header className={styles.bar}>
       <button className={styles.brand} onClick={() => navigate({ view: "landing" })}>
-        🏆 Ranking Engine
+        <span className={styles.brandMark} aria-hidden="true" />
+        Ranking Engine
       </button>
       <nav className={styles.links}>
         <button

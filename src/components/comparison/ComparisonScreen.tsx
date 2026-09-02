@@ -47,14 +47,16 @@ export function ComparisonScreen({ rankingId }: ComparisonScreenProps) {
 
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.heading}>Which do you like more?</h1>
+      <h1 className={styles.heading}>Which one wins?</h1>
       <ProgressBar
         made={ranking.comparison.comparisonsMade}
         estimate={ranking.comparison.totalComparisonsEstimate}
       />
       <div className={styles.arena}>
         <ComparisonCard item={itemA} onPick={() => recordComparison(rankingId, itemA.id)} />
-        <span className={styles.vs}>VS</span>
+        <span className={styles.vs} aria-hidden="true">
+          VS
+        </span>
         <ComparisonCard item={itemB} onPick={() => recordComparison(rankingId, itemB.id)} />
       </div>
       <Button

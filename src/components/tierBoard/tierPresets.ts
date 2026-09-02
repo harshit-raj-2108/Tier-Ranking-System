@@ -4,14 +4,15 @@ export interface TierPreset {
   label: string;
   description: string;
   color: string;
+  text: string;
 }
 
 export const TIER_PRESETS: Record<TierKey, TierPreset> = {
-  S: { label: "S", description: "The Best Choice", color: "#e8607a" },
-  A: { label: "A", description: "2nd Choice", color: "#eab064" },
-  B: { label: "B", description: "Good But Not Great", color: "#e8cf5c" },
-  C: { label: "C", description: "This is average", color: "#7cbf6e" },
-  D: { label: "D", description: "Slightly Below Average", color: "#5fc9d6" },
-  E: { label: "E", description: "Below Average", color: "#5b95d9" },
-  F: { label: "F", description: "Worst Choice", color: "#9c72d6" },
+  S: { label: "S", description: "The best of the best", color: "#c9962f", text: "#161f1a" },
+  A: { label: "A", description: "Really strong", color: "#9ba3a0", text: "#161f1a" },
+  B: { label: "B", description: "Solid pick", color: "#b8814f", text: "#161f1a" },
+  C: { label: "C", description: "Middle of the pack", color: "#4f6b46", text: "#f5f3e8" },
+  D: { label: "D", description: "Below average", color: "#47617a", text: "#f5f3e8" },
+  E: { label: "E", description: "Rarely reach for it", color: "#9a8d70", text: "#161f1a" },
+  F: { label: "F", description: "Bottom of the list", color: "#7c4a56", text: "#f5f3e8" },
 };

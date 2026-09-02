@@ -14,7 +14,7 @@ export function ProgressBar({ made, estimate }: ProgressBarProps) {
         <div className={styles.fill} style={{ width: `${pct}%` }} />
       </div>
       <span className={styles.label}>
-        {made} comparisons made (~{estimate} estimated)
+        matchup <strong className={styles.count}>{made}</strong> of ~{estimate}
       </span>
     </div>
   );

@@ -72,7 +72,10 @@ export function TierBoard({ rankingId }: TierBoardProps) {
   return (
     <div className={styles.wrap}>
       <div className={styles.header}>
-        <h1>{ranking.name}</h1>
+        <div>
+          <h1 className={styles.heading}>{ranking.name}</h1>
+          <p className={styles.caption}>Drag cards to fine-tune the order.</p>
+        </div>
         <Button variant="secondary" onClick={() => navigate({ view: "rankings-library" })}>
           Back to Rankings
         </Button>
